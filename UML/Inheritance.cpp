@@ -19,7 +19,7 @@ protected:
 
 class Car:public Vehicle {
 public:
-    Car(int age):Vehicle(){
+    Car(int age):Vehicle(),m_motor(std::string("VR6")){
         m_nwheels = 4;
         m_age = age;
     }
@@ -27,8 +27,10 @@ public:
         std::cout << "Car has " << m_nwheels << " wheels and is " << m_age << " old!" << std::endl;
     }
     std::string motor() {
-        return std::string("VR6");
+        return m_motor;
     }
+protected:
+    std::string m_motor;
 };
 
 int main(int argc, char* agrv[]) {
