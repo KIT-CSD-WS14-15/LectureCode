@@ -7,6 +7,7 @@
 //
 
 #include<iostream>
+#include<string>
 
 class Vehicle {
 public:
@@ -25,10 +26,14 @@ public:
     void print() const {
         std::cout << "Car has " << m_nwheels << " wheels and is " << m_age << " old!" << std::endl;
     }
+    std::string motor() {
+        return std::string("VR6");
+    }
 };
 
 int main(int argc, char* agrv[]) {
     Car my_car(14);
     my_car.print();
+    std::cout << my_car.motor() << std::endl;
     return 0;
 }
