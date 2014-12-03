@@ -33,6 +33,10 @@ public:
   /** Getter for the name of the particle.*/
   std::string getName() const;
 
+  bool operator == (const Particle& particle){
+    return (m_name == particle.m_name);
+  }
+
 private:
   std::string m_name;
 };

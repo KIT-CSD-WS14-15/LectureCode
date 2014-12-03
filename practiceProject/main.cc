@@ -1,10 +1,11 @@
 #include <Particle.h>
-#include <Particle.h>
+#include <Pion.h>
 
 #include <iostream>
 #include <string>
 #include <vector>
 #include <map>
+#include <algorithm>
 
 using namespace std;
 
@@ -28,6 +29,12 @@ int main()
     }
   }
 
+  //Is the number of B daughters equal the number of total particles?
   cout << "Wir haben so viele Teilchen in unserem Baum: " << particles.size() << endl;
   cout << "Die Zahl der B Töchter ist: " << particles[0].getNDaughters()      << endl;
+
+  //How many Pions are in the list?
+  cout << "Die Zahl der Pionen ist: "
+       << 5 //@TODO calculate this number appropriately
+       << endl;
 }
