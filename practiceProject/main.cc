@@ -37,6 +37,6 @@ int main()
 
   //How many Pions are in the list?
   cout << "Die Zahl der Pionen ist: "
-       << 5 //@TODO calculate this number appropriately
+       << count(particles.begin(), particles.end(), s_pion)
        << endl;
 }
