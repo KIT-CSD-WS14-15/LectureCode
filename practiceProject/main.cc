@@ -9,6 +9,11 @@
 
 using namespace std;
 
+/** @mainpage Practice Project
+ *  
+ *  This project is made for little examples during the lecture. <br>
+ *  <a href="https://github.com/KIT-CSD-WS14-15/LectureCode">Get back to the github repository.</a>
+ */
 int main()
 {
   cout << "Dies ist ein Testprogramm für Collaborative Software Design. " << endl;
