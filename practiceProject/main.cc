@@ -20,6 +20,8 @@ int main()
 
   /** Container for the Particle objects.*/
   vector<Particle> particles;
+  //Reserve enough space, that the container doesn't have to be reallocated at push_back.
+  particles.reserve(20);
   particles.emplace_back("B");
 
   for (auto iter = particles.begin(); iter != particles.end(); iter++) {

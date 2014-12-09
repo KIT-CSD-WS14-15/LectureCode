@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 
 /** This is a base class for particles in out Project.
@@ -33,7 +34,7 @@ public:
   /** Getter for the name of the particle.*/
   std::string getName() const;
 
-  bool operator == (const Particle& particle){
+  bool operator == (const Particle& particle) {
     return (m_name == particle.m_name);
   }
 
