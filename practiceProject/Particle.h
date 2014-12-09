@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <vector>
 
 /** This is a base class for particles in out Project.
  *
@@ -21,13 +22,12 @@ public:
    *  The "const" tells the compiler, that it is not allowed to change a member of the class Particle
    *  inside the function. <br>
    *  This function is only DECLARED here, but DEFINED in a separate .cc file.
-   *  @TODO The real implementation is still missing.
    */
   unsigned getNDaughters() const;
 
   /** Adding a daughter Particle to this Particle.
    *
-   *  @TODO Implementation is missing.
+   *  We will take the address of the particle and store it internally.
    */
   void addDaughter(const Particle& particle);
 
@@ -40,4 +40,5 @@ public:
 
 private:
   std::string m_name;
+  std::vector<Particle const*> m_directDaughters;
 };
