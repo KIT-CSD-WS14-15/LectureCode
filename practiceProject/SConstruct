@@ -2,5 +2,6 @@
 
 env = DefaultEnvironment()
 
-Program ("practiceProgram", [Glob('*.cc')] , CPPPATH=['.'], CCFLAGS = ['-std=c++11', '-ggdb'])
+Program ("practiceProgram", [Glob('*.cc')] , CPPPATH=['.'],\
+  CCFLAGS = ['-std=c++11', '-ggdb', '-D DEBUG'])
 
