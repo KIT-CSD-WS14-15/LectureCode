@@ -1,4 +1,5 @@
 #include <Particle.h>
+#include <Logger.h>
 #include <iostream>
 
 using namespace std;
@@ -14,8 +15,8 @@ unsigned Particle::getNDaughters() const
 
 void Particle::addDaughter(const Particle& particle)
 {
-  cout << "Adding particle "  << particle.getName()
-       << " to the particle " << m_name << endl;
+  INFO("Adding particle " << particle.getName() 
+    << " to the particle " << m_name);
   m_directDaughters.push_back(&particle);
 }
 
