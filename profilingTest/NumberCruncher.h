@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <vector>
 
 class NumberCruncher
 {
@@ -13,6 +14,24 @@ public:
       }
     }
     return current;
+  }
+
+  void addTwoVectors() {
+    std::vector<int> vector1(10000);
+    std::vector<int> vector2(10000);
+
+    std::vector<int> vector3(10000);
+
+    for (int ii = 0; ii < 10000; ++ii){
+      vector1[ii] = ii;
+      vector2[ii] = ii * 3;
+    }
+
+    for (int ii = 0; ii < 10000; ++ii){
+      for (int jj = 0; jj < 10000; ++jj){
+        vector2[jj] = vector1[jj]+vector2[ii];
+      }
+    }
   }
 
 private:
